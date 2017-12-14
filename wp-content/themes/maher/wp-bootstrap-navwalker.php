@@ -81,7 +81,6 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
                 $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
                 if($args->has_children && $depth === 0) { $class_names .= ' dropdown'; }
                 elseif($args->has_children && $depth > 0) {$class_names .= ' dropdown dropdown-submenu'; }
-
                 if ( in_array( 'current-menu-item', $classes, true ) ) {
                     $class_names .= ' active';
                 }
